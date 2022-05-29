@@ -2,11 +2,11 @@ import React from 'react'
 
 const Bio = () => {
     const style = {
-      mainContainer: 'bg-black flex h-fit p-24 w-full text-white',
-      textBox: ' h-3/5 w-4/5 md:w-2/5 m-auto text-center',
-      heading: 'uppercase font-extrabold text-4xl',
-      borderBox: 'p-8  mt-8 md:m-8 border-2 border-red-900',
-      bio: 'text-lg'
+      mainContainer: 'bg-black flex h-fit p-8 pt-32 pb-32  w-full text-white',
+      textBox: ' h-3/5 m-auto text-center ',
+      heading: 'uppercase font-extrabold text-4xl m-auto',
+      borderBox: 'p-8 lg:w-2/5 mt-8 m-auto border-2 border-red-900',
+      bio: 'text-lg lg:text-xl'
 
     }
 

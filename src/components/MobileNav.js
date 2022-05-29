@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import Menu from './assets/Menu.pdf'
+import PartyMenu from './assets/PartyMenu.pdf'
+import CateringMenu from './assets/CateringMenu.pdf'
 
 const MobileNav = ({showSidebar, sidebar, showMenu, menu, giftCard, showOrder, order, grubHub, takeOut}) => {
   const style = {
@@ -32,16 +35,16 @@ return (
     </div>
     <div className={`flex top-0 right-0 w-[45vw] bg-black/90 p-10 text-white fixed h-full ease-in-out duration-300 md:hidden ${ sidebar ? 'translate-x-0' : 'translate-x-full'}`}>
       <ul className={style.links}>
-      <li><Link to='/' onClick={showSidebar} className={style.navLink}>Home</Link></li>
+      <li><Link to='/' onClick={showSidebar} className={style.link}>Home</Link></li>
       <li onClick={showMenu} className="divide-y-4">
                     <div>
                         <p className={style.link}>Menu</p>
                         <ul className={menu ? 'flex flex-col pt-2 space-y-2' : 'hidden'}>
-                            <li className={style.link}>- Dinner</li>
-                            <li className={style.link}>- Brunch</li>
-                            <li className={style.link}>- Catering</li>
-                            <li className={style.link}>- Parties</li>
-                          </ul>
+                            <li className={style.link}><a href={Menu} target="_blank">Dinner</a></li>
+                            <li className={style.link}>Brunch</li>
+                            <li className={style.link}><a href={PartyMenu} target="_blank">Party Menu</a></li>
+                            <li className={style.link}><a href={CateringMenu} target="_blank">Catering Menu</a></li>
+                        </ul>
                     </div>
                 </li>
                 
@@ -52,7 +55,7 @@ return (
                         Gift Card
                     </a>
                   </li>
-                <li><Link to='/' onClick={showSidebar} className={style.link}>Contact Us</Link></li>
+                  <li onClick={showSidebar} className={style.link}><a href="#contact">Contact</a></li>
                 <li className={style.dropdown} onClick={showOrder}>
                     <div>
                         <p className={style.link}>Order Now</p>

@@ -2,6 +2,10 @@ import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
 import MobileNav from "./MobileNav.js"
 import Dropdown from './Dropdown.js'
+import Menu from './assets/Menu.pdf'
+import PartyMenu from './assets/PartyMenu.pdf'
+import CateringMenu from './assets/CateringMenu.pdf'
+
 
 const Header = () => {
     
@@ -39,10 +43,10 @@ const Header = () => {
                     <div>
                         <p className={style.navLink}>Menu</p>
                             <ul className={menu ? 'flex flex-col pt-1 space-y-1' : 'hidden'}>
-                                <li className={style.navLink}>Dinner</li>
+                                <li className={style.navLink}><a href={Menu} target="_blank">Dinner</a></li>
                                 <li className={style.navLink}>Brunch</li>
-                                <li className={style.navLink}>Party Menu</li>
-                                <li className={style.navLink}>Catering Menu</li>
+                                <li className={style.navLink}><a href={PartyMenu} target="_blank">Party Menu</a></li>
+                                <li className={style.navLink}><a href={CateringMenu} target="_blank">Catering Menu</a></li>
                             </ul>
                     </div>
                 </li>
